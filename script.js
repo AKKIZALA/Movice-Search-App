@@ -11,7 +11,6 @@ const SEARCHAPI =
     const getmovice = async (api)=> {
         const response = await fetch(api)
         const data =  await response.json()
-        // console.log(data)
         showmovice(data.results)
     }
 
@@ -39,7 +38,6 @@ const SEARCHAPI =
             console.log(event.target.value)
             if(event.target.value != ""){
                let p = getmovice(SEARCHAPI + event.target.value)
-               console.log(p)
             }else{
                 getmovice (APIURL)
             }
